@@ -1,0 +1,67 @@
+# Unity - игнорируем временные файлы и билды
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+MemoryCaptures/
+
+# Игнорируем файлы сборки (exe, apk, и т.д.)
+*.apk
+*.aab
+*.exe
+*.app
+*.unitypackage
+*.bat
+*.sh
+*.zip
+*.tar.gz
+
+# Игнорируем персональные настройки
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+
+# Игнорируем кэш и автосгенерированные файлы
+*.csproj
+*.unityproj
+*.sln
+*.tmproj
+*.log
+*.vsconfig
+*.DS_Store
+*.meta
+
+# Игнорируем файлы Visual Studio
+.vs/
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+*.db
+*.obj
+*.idb
+*.pdb
+*.ilk
+*.aps
+*.ncb
+*.sdf
+*.opensdf
+*.opendb
+
+# Игнорируем Rider (если используешь JetBrains Rider)
+.idea/
+*.iml
+
+# Игнорируем файлы Windows и MacOS
+Thumbs.db
+.DS_Store
+*.bak
+*.swp

@@ -373,9 +373,11 @@
 -analyzer:"D:/Unity/2022.3.14f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/GateController.cs"
 "Assets/Scripts/Interactable.cs"
+"Assets/Scripts/PickupObject.cs"
 "Assets/Scripts/PlayerScript/CameraController.cs"
 "Assets/Scripts/PlayerScript/PlayerInteraction.cs"
 "Assets/Scripts/PlayerScript/PlayerMovement.cs"
+"Assets/Scripts/PlayerScript/PlayerPickup.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
 

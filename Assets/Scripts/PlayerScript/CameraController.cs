@@ -2,31 +2,25 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float mouseSensitivity = 100f; // Чувствительность мыши
-    public Transform playerBody;         // Ссылка на тело игрока
-
+    public Transform playerBody;  
+    public float mouseSensitivity = 200f;  
     private float xRotation = 0f;
 
     void Start()
     {
-        // Скрываем курсор и фиксируем его в центре экрана
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;  // Блокируем курсор в центре экрана
     }
 
     void Update()
     {
-        // Получаем движение мыши
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        // Убираем Time.deltaTime для мыши, но оставляем множитель чувствительности
+        float mouseX = Input.GetAxisRaw("Mouse X") * mouseSensitivity * 0.02f; 
+        float mouseY = Input.GetAxisRaw("Mouse Y") * mouseSensitivity * 0.02f; 
 
-        // Ограничиваем вращение по оси X (вверх-вниз)
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);  // Ограничиваем вращение вверх/вниз
 
-        // Вращаем камеру вверх-вниз
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-
-        // Вращаем тело игрока влево-вправо
         playerBody.Rotate(Vector3.up * mouseX);
     }
 }
